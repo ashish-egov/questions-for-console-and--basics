@@ -1,39 +1,37 @@
-🔝 Top 5 Simple Kafka Questions (with focus on consumer & partitions)
+# Top 5 Basic Kafka Interview Questions (Simple and In-depth)
 
-How does Kafka decide which partition will get a message?
+## 1. How does Kafka decide which partition will get a message?
+- If a **key** is provided → Kafka always sends messages with the same key to the same partition (ordering maintained).  
+- If **no key** is provided → Kafka distributes messages in a **round-robin** manner (for load balancing).  
 
-If a key is given → Kafka always sends to the same partition (ordering maintained).
+---
 
-If no key → Kafka distributes messages in round-robin style (load balancing).
+## 2. What is a Consumer Group?
+- A **Consumer Group** is a set of consumers reading from the same topic.  
+- Kafka ensures that each partition’s data goes to **only one consumer in the group**.  
+- This avoids duplicate processing and allows scaling.  
 
-What is a Consumer Group?
+---
 
-A consumer group is a set of consumers reading from the same topic.
+## 3. What is Rebalancing in Kafka?
+- When a **new consumer joins**, or an **existing one leaves/crashes**, Kafka reassigns partitions among available consumers.  
+- This process is called **Rebalancing**.  
+- During rebalancing, consumers may temporarily **stop reading messages**.  
 
-Kafka ensures each partition’s data goes to only one consumer in that group.
+---
 
-This avoids duplicate processing and helps scale reading.
+## 4. What are Offsets in Kafka?
+- **Offset** = the position of a message in a partition.  
+- Consumers use offsets to track which messages have been read.  
+- Offsets can be:
+  - **Auto-committed** (Kafka commits automatically).  
+  - **Manually committed** (application decides when to commit).  
 
-What is Rebalancing in Kafka?
+---
 
-When a new consumer joins or an existing one leaves/crashes, Kafka reassigns partitions.
+## 5. How does Kafka handle Failures (High Availability)?
+- Each partition has a **Leader** and multiple **Followers (replicas)**.  
+- Producers and consumers always talk to the **Leader**.  
+- If the leader fails → one of the followers is automatically promoted to **new leader**.  
 
-This process is called rebalancing.
-
-During this time, consumers can temporarily stop reading.
-
-What are Offsets in Kafka?
-
-Offset = the position of a message inside a partition.
-
-Consumers keep track of which offset they have read.
-
-Offsets can be auto-committed (Kafka does it) or manually committed (you control).
-
-How does Kafka handle Failures (High Availability)?
-
-Each partition has a leader and some followers (replicas).
-
-Producers/consumers talk to the leader.
-
-If leader fails → one of the followers becomes the new leader automatically.
+---
