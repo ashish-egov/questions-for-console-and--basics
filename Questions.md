@@ -37,25 +37,11 @@
 ---
 
 ## 6. What are Facility, Employee, and Project in the Admin Console?
-- **Facility** → A physical or virtual location where work takes place  
-  (e.g., hospital, school, warehouse, training center).  
-- **Employee (Staff)** → A person working in or assigned to a facility  
-  (e.g., teacher, nurse, operator).  
-- **Project** → An initiative or program executed at a facility  
-  (e.g., vaccination drive, training program, product distribution).  
-
-**Summary:**  
-Admin Console manages **Facilities (where)**, **Employees (who)**, and **Projects (what work/initiative)**.  
+- Facility, Employee, and Project are core entities managed in the Admin Console.  
 
 ---
 
 ## 7. What is Project Mapping with Facility, Staff (Employee), and Resource/Product Variants?
-- **Project → Facility mapping**: Defines **where** a project will run.  
-- **Project → Staff (Employee) mapping**: Assigns **who** will work on the project.  
-- **Project → Resource/Product Variants mapping**: Links **what resources/products** are required  
-  (e.g., medicine types, training materials, product SKUs).  
-
-**Summary:**  
-Project mapping connects **location, people, and resources** for proper execution and tracking.  
+- Project mapping defines how a project is linked to facilities, employees, and resources/product variants.  
 
 ---
