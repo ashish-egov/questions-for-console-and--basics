@@ -1,4 +1,4 @@
-# Top 5 Basic Kafka Interview Questions (Simple and In-depth)
+# Kafka and Admin Console Basics (Training Notes)
 
 ## 1. How does Kafka decide which partition will get a message?
 - If a **key** is provided → Kafka always sends messages with the same key to the same partition (ordering maintained).  
@@ -33,5 +33,29 @@
 - Each partition has a **Leader** and multiple **Followers (replicas)**.  
 - Producers and consumers always talk to the **Leader**.  
 - If the leader fails → one of the followers is automatically promoted to **new leader**.  
+
+---
+
+## 6. What are Facility, Employee, and Project in the Admin Console?
+- **Facility** → A physical or virtual location where work takes place  
+  (e.g., hospital, school, warehouse, training center).  
+- **Employee (Staff)** → A person working in or assigned to a facility  
+  (e.g., teacher, nurse, operator).  
+- **Project** → An initiative or program executed at a facility  
+  (e.g., vaccination drive, training program, product distribution).  
+
+**Summary:**  
+Admin Console manages **Facilities (where)**, **Employees (who)**, and **Projects (what work/initiative)**.  
+
+---
+
+## 7. What is Project Mapping with Facility, Staff (Employee), and Resource/Product Variants?
+- **Project → Facility mapping**: Defines **where** a project will run.  
+- **Project → Staff (Employee) mapping**: Assigns **who** will work on the project.  
+- **Project → Resource/Product Variants mapping**: Links **what resources/products** are required  
+  (e.g., medicine types, training materials, product SKUs).  
+
+**Summary:**  
+Project mapping connects **location, people, and resources** for proper execution and tracking.  
 
 ---
