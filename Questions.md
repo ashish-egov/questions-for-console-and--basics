@@ -45,3 +45,8 @@
 - Project mapping defines how a project is linked to facilities, employees, and resources/product variants.  
 
 ---
+
+## 8. How does Flyway Migration work?
+- Flyway applies database schema changes using versioned migration scripts and keeps track in a metadata table for consistency.  
+
+---
